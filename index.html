@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Harikrishna Gajula Portfolio</title>
+<title>Harikrishna Gajula | Portfolio</title>
 
 <style>
 
@@ -11,22 +11,45 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial,sans-serif;
 scroll-behavior:smooth;
+font-family:'Segoe UI',sans-serif;
 }
 
 body{
 background:#0f172a;
 color:white;
+line-height:1.6;
 }
 
-header{
-height:100vh;
+nav{
+position:sticky;
+top:0;
+background:#020617;
+padding:15px;
 display:flex;
+justify-content:center;
+gap:30px;
+z-index:1000;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+nav a:hover{
+color:#38bdf8;
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-padding:20px;
+padding:30px;
 }
 
 .hero img{
@@ -48,19 +71,21 @@ margin:15px 0;
 }
 
 .hero p{
-max-width:700px;
-margin:auto;
-line-height:1.7;
+max-width:800px;
+}
+
+.buttons{
+margin-top:20px;
 }
 
 .btn{
 display:inline-block;
-margin-top:20px;
 padding:12px 25px;
+margin:10px;
 background:#38bdf8;
 color:black;
-text-decoration:none;
 font-weight:bold;
+text-decoration:none;
 border-radius:8px;
 }
 
@@ -68,22 +93,23 @@ section{
 padding:80px 10%;
 }
 
-h2{
+.section-title{
 color:#38bdf8;
+font-size:2rem;
 margin-bottom:20px;
 }
 
 .card{
 background:#1e293b;
-padding:20px;
-border-radius:10px;
+padding:25px;
+border-radius:12px;
 margin-bottom:20px;
 }
 
 .skills{
 display:flex;
 flex-wrap:wrap;
-gap:10px;
+gap:12px;
 }
 
 .skill{
@@ -94,10 +120,44 @@ border-radius:20px;
 font-weight:bold;
 }
 
+.project{
+background:#1e293b;
+padding:25px;
+margin-bottom:20px;
+border-radius:12px;
+border-left:5px solid #38bdf8;
+}
+
+.project h3{
+margin-bottom:10px;
+}
+
+.contact a{
+color:#38bdf8;
+text-decoration:none;
+}
+
 footer{
+background:#020617;
 text-align:center;
 padding:20px;
-background:#020617;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:2rem;
+}
+
+.hero h2{
+font-size:1.2rem;
+}
+
+nav{
+flex-wrap:wrap;
+gap:15px;
+}
+
 }
 
 </style>
@@ -105,52 +165,201 @@ background:#020617;
 
 <body>
 
-<header>
+<nav>
+<a href="#about">About</a>
+<a href="#education">Education</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#certifications">Certifications</a>
+<a href="#contact">Contact</a>
+</nav>
 
-<div class="hero">
+<section class="hero">
 
 <img src="my photo.jpg" alt="Harikrishna">
 
 <h1>Harikrishna Gajula</h1>
 
 <h2>
-Java Developer | Deep Learning Enthusiast | Embedded Systems Engineer
+Embedded Systems Engineer | Deep Learning Enthusiast | Java Developer
 </h2>
 
 <p>
-Passionate about developing intelligent systems using Deep Learning, IoT, and Embedded Technologies. Experienced in building real-time UAV safety solutions, smart automation systems, and innovative engineering projects.
+Passionate about developing intelligent systems using Deep Learning, Embedded Technologies, IoT and Java. Experienced in building UAV safety solutions, smart automation systems and innovative engineering projects.
 </p>
+
+<div class="buttons">
 
 <a href="my resume final(mineupdated).pdf" class="btn">
 Download Resume
 </a>
 
+<a href="https://www.linkedin.com/in/harikrishna-gajula-478343311" class="btn">
+LinkedIn
+</a>
+
+<a href="https://github.com/Hari910-tech" class="btn">
+GitHub
+</a>
+
 </div>
 
-</header>
+</section>
 
-<section>
+<section id="about">
 
-<h2>About Me</h2>
+<h2 class="section-title">About Me</h2>
 
 <div class="card">
 
 <p>
-I am a B.Tech student in Electronics & Communication Engineering at Anurag University with a CGPA of 8.3. My interests include Deep Learning, Embedded Systems, IoT, Java Development and UAV Technologies.
+I am a B.Tech student in Electronics & Communication Engineering at Anurag University with a CGPA of 8.3.
+
+My interests include Embedded Systems, Deep Learning, Computer Vision, UAV Technologies, IoT and Software Development. I enjoy solving real-world problems through innovative technology solutions.
 </p>
 
 </div>
 
-<h2>Featured Project</h2>
+</section>
+
+<section id="education">
+
+<h2 class="section-title">Education</h2>
 
 <div class="card">
 
-<h3>Real-Time Low Altitude Hazard Avoidance and Safe Landing for Agricultural UAVs using QNX RTOS</h3>
+<h3>B.Tech - Electronics & Communication Engineering</h3>
+<p>Anurag University, Hyderabad</p>
+<p>CGPA: 8.3</p>
+<p>Graduation Year: 2026</p>
 
 <br>
 
+<h3>Intermediate</h3>
+<p>Sri Vikas Junior College</p>
+<p>95%</p>
+
+<br>
+
+<h3>SSC</h3>
+<p>Sri Vidhya Ranya Avasa Vidhyalayam</p>
+<p>10/10 GPA</p>
+
+</div>
+
+</section>
+
+<section id="skills">
+
+<h2 class="section-title">Technical Skills</h2>
+
+<div class="skills">
+
+<div class="skill">Java</div>
+<div class="skill">Python</div>
+<div class="skill">C</div>
+<div class="skill">MATLAB</div>
+<div class="skill">Verilog</div>
+<div class="skill">Deep Learning</div>
+<div class="skill">Computer Vision</div>
+<div class="skill">Image Processing</div>
+<div class="skill">QNX RTOS</div>
+<div class="skill">Embedded Systems</div>
+<div class="skill">IoT</div>
+<div class="skill">Linux</div>
+<div class="skill">Ubuntu</div>
+<div class="skill">Git</div>
+
+</div>
+
+</section>
+
+<section id="projects">
+
+<h2 class="section-title">Projects</h2>
+
+<div class="project">
+
+<h3>Real-Time Low Altitude Hazard Avoidance and Safe Landing for Agricultural UAVs using QNX RTOS</h3>
+
 <p>
 Developed an intelligent UAV safety system using Deep Learning and QNX RTOS for real-time hazard detection, obstacle avoidance and emergency safe landing.
+</p>
+
+</div>
+
+<div class="project">
+
+<h3>IoT Smart Mirror with News and Temperature</h3>
+
+<p>
+Designed an IoT-based Smart Mirror displaying real-time news updates and temperature information.
+</p>
+
+</div>
+
+<div class="project">
+
+<h3>Smart Irrigation System</h3>
+
+<p>
+Developed an automated irrigation system for efficient water management and agricultural automation.
+</p>
+
+</div>
+
+<div class="project">
+
+<h3>Image Noise Reduction</h3>
+
+<p>
+Implemented image processing techniques to reduce image noise and improve image quality.
+</p>
+
+</div>
+
+</section>
+
+<section id="certifications">
+
+<h2 class="section-title">Certifications & Achievements</h2>
+
+<div class="card">
+
+<ul>
+<li>Cisco CCNA Certification</li>
+<li>MATLAB Certification</li>
+<li>VISIONOVA 2K25 National-Level Hackathon Participant</li>
+<li>Micro-Bot Workshop</li>
+<li>NSS Member</li>
+</ul>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2 class="section-title">Contact</h2>
+
+<div class="card contact">
+
+<p>📧 Harikrishnagajula910@gmail.com</p>
+
+<p>📱 +91 9908507108</p>
+
+<p>
+LinkedIn:
+<a href="https://www.linkedin.com/in/harikrishna-gajula-478343311">
+View Profile
+</a>
+</p>
+
+<p>
+GitHub:
+<a href="https://github.com/Hari910-tech">
+Hari910-tech
+</a>
 </p>
 
 </div>
@@ -160,7 +369,7 @@ Developed an intelligent UAV safety system using Deep Learning and QNX RTOS for 
 <footer>
 
 <p>
-© 2026 Harikrishna Gajula
+© 2026 Harikrishna Gajula | Portfolio Website
 </p>
 
 </footer>
